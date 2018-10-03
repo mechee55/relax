@@ -1,0 +1,84 @@
+html {
+  font-family: 'Nunito', sans-serif;
+}
+
+.theContainer {
+  width: 60%;
+  height: 600px;
+  margin: 60px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#top {
+  width: 50%;
+  height: 122px;
+  text-align: center;
+}
+
+#center {
+  width: 30%;
+  height: 70px;
+  text-align: center;
+}
+
+#bottom {
+  width: 90%;
+  height: 220px;
+  text-align: center;
+}
+
+/* English */
+#relax {
+  font-size: 7.5em;
+  font-weight: 700;
+}
+
+#just {
+  font-size: 3.3em;
+}
+
+#javascript {
+  font-size: 12em;
+  font-weight: 700;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+/* Japanese */
+#relaxJap {
+  font-size: 3.2em;
+  margin-top: -80px;
+}
+
+#justJap {
+  font-size: 2.2em;
+  margin-top: -30px;
+}
+
+#javascriptJap {
+  font-size: 4.67em;
+  margin-top: -80px;
+}
+
+.theCard {
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
+  background-color: white;
+}
+
+.theCard:hover {
+  transform: rotateX(180deg);
+}
+
+.theFront {
+  backface-visibility: hidden;
+}
+
+.theBack {
+  backface-visibility: hidden;
+  transform: rotateX(180deg);
+  display: flex;
+  flex-direction: column;
+}
