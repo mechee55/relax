@@ -1,84 +1,136 @@
 html {
   font-family: 'Nunito', sans-serif;
+  box-sizing: border-box;
+  white-space: nowrap;
+  background-color: rgba(255, 218, 185, 0.301);
 }
 
+/* Container  */
 .theContainer {
+  position: relative;
   width: 60%;
-  height: 600px;
-  margin: 60px auto;
+  height: 550px;
+  margin: 100px auto;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: space-around;
 }
 
-#top {
-  width: 50%;
-  height: 122px;
-  text-align: center;
-}
-
-#center {
-  width: 30%;
-  height: 70px;
-  text-align: center;
-}
-
-#bottom {
-  width: 90%;
-  height: 220px;
-  text-align: center;
-}
-
-/* English */
-#relax {
-  font-size: 7.5em;
-  font-weight: 700;
-}
-
-#just {
-  font-size: 3.3em;
-}
-
-#javascript {
-  font-size: 12em;
-  font-weight: 700;
-  font-family: 'Open Sans Condensed', sans-serif;
-}
-
-/* Japanese */
-#relaxJap {
-  font-size: 3.2em;
-  margin-top: -80px;
-}
-
-#justJap {
-  font-size: 2.2em;
-  margin-top: -30px;
-}
-
-#javascriptJap {
-  font-size: 4.67em;
-  margin-top: -80px;
-}
-
-.theCard {
+/* Each card */
+.card {
+  position: absolute;
+  border: 2px solid red;
+  border-radius: 5px;
   transform-style: preserve-3d;
-  transition: all 0.5s ease;
-  background-color: white;
+  transition: transform 0.5s ease;
 }
 
-.theCard:hover {
+/* When hovered */
+.card:hover {
   transform: rotateX(180deg);
+  cursor: pointer;
 }
 
-.theFront {
+/* All the front card */
+.front {
+  position: absolute;
+  height: 100%;
+  width: 100%;
   backface-visibility: hidden;
+  text-align: center;
 }
 
-.theBack {
-  backface-visibility: hidden;
+/* All the back card */
+.back {
   transform: rotateX(180deg);
-  display: flex;
-  flex-direction: column;
+  backface-visibility: hidden;
+  text-align: center;
+}
+
+/* each card's position and height and width within the container */
+.top {
+  max-width: 63%;
+  height: 130px;
+}
+
+.center {
+  width: 30%;
+  height: 80px;
+  top: 195px;
+}
+
+.bottom {
+  width: 100%;
+  height: 200px;
+  bottom: 0;
+}
+
+/* Each front card  */
+
+.relax {
+  /* background-color: rgba(235, 190, 94, 0.514); */
+}
+
+.just {
+  /* background-color: rgba(222, 184, 135, 0.568); */
+  padding-top: 8px;
+}
+
+.javascript {
+  /* background-color: rgba(169, 169, 169, 0.527); */
+  padding-top: 15px;
+  padding-left: 5px;
+}
+
+/* Each Back card */
+.relaxJap {
+  padding-bottom: 25px;
+  padding-left: 40px;
+}
+
+.justJap {
+  padding-bottom: 15px;
+}
+
+.javascriptJap {
+  padding-bottom: 50px;
+  padding-left: 22px;
+}
+
+/* English font sizes */
+
+/* relax(eng) */
+h4 {
+  font-size: 8.5vw;
+}
+
+/* it's just(eng)  */
+h5 {
+  font-size: 4vw;
+}
+
+/* javascript(eng) */
+h6 {
+  font-size: 12vw;
+  font-weight: 700;
+}
+
+/* japanese font sizes */
+
+/* javascript(jap) */
+h1 {
+  font-size: 6vw;
+}
+
+/* relax(jap) */
+h2 {
+  font-size: 4.4vw;
+
+  /* margin-left: 20px; */
+}
+
+/* it's just(jap) */
+h3 {
+  font-size: 3vw;
 }
